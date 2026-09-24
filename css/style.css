@@ -1,1 +1,112 @@
+/* Remove espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+
+/* Configuração geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d6d6d6;
+    color: #333;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 60px 0;
+}
+
+
+/* Container principal do cabeçalho */
+.Cabecalho {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* Espaço reservado para a imagem */
+.Imagem {
+    width: 100px;
+    height: 100px;
+
+    background-color: #ccc;
+
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+
+/* Área com nome e descrição */
+.Conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Nome */
+h2.Conteudo {
+    font-size: 28px;
+}
+
+
+/* Texto sobre mim */
+.Conteudo p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+
+    width: 98%;
+
+    max-width: 1000px;
+
+    min-height: 1000px;
+
+    margin: 10px auto;
+
+    padding: 30px;
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* Texto do rodapé */
+footer p {
+    font-size: 14px;
+}
