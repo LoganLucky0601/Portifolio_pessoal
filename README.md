@@ -80,10 +80,6 @@ portfolio/
     └── projeto-4.jpg
 ```
 
-## Link do Instagram
-
-Na seção de contato de `index.html`, substitua `https://www.instagram.com/` pelo endereço completo do seu perfil, como `https://www.instagram.com/seu_usuario/`. As imagens dos quatro projetos são mockups ilustrativos locais.
-
 ## Entendendo o código
 
 O `index.html` contém o conteúdo do site. O `css/style.css` define as cores, os tamanhos, as colunas e os alinhamentos. Procure os comentários numerados no CSS para encontrar cada parte.
