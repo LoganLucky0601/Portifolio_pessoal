@@ -243,10 +243,11 @@ h1 span,h2 span {
 .portrait-glow {
     position: absolute;
     inset: 12%;
-    background: radial-gradient(circle,rgba(255,135,40,.34),transparent 72%);
+    background: radial-gradient(circle,rgba(228, 109, 13, 0.34),transparent 72%);
     filter: blur(18px);
     z-index: -1;
 }
+
 
 /* Foto de perfil: corte circular sem deformar a imagem. */
 .hero-portrait img {
@@ -256,8 +257,8 @@ h1 span,h2 span {
     object-fit: cover;
     object-position: center 35%;
     border-radius: 50%;
-    border: 3px solid var(--accent);
-    box-shadow: 0 22px 45px rgba(0,0,0,.25);
+    border: 2px solid var(--accent);
+    box-shadow: 0 1px 30px rgba(255, 161, 38, 0.582);
 }
 
 .portrait-caption {
