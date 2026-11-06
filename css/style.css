@@ -515,7 +515,7 @@ h3 {
     }
 }
 
-/* Dois carrosséis: formação e experiência */
+/* Carrosséis da trajetória: mesmo padrão dos projetos e conquistas */
 .journey-group + .journey-group {
     margin-top: 55px;
 }
@@ -532,33 +532,40 @@ h3 {
     max-width: 700px;
 }
 
-/* Os cards mantêm o efeito de vidro, mas passam a deslizar na horizontal */
 .journey-carousel {
+    --card-width: 38%;
     display: flex;
-    gap: 20px;
     overflow-x: auto;
-    padding: 18px 10px 28px;
+    gap: .65rem;
+    padding: .75rem 0 1rem;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: 10px;
     scrollbar-color: var(--border) transparent;
 }
 
 .journey-carousel .journey-card {
-    flex: 0 0 calc((100% - 40px) / 3);
+    flex: 0 0 var(--card-width);
     scroll-snap-align: start;
+    min-height: 19rem;
 }
 
-/* Cada carrossel tem seus próprios controles */
+.journey-carousel .journey-card.is-current {
+    border-color: var(--accent);
+}
+
 .journey-controls {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .journey-controls[hidden] {
     display: none;
+}
+
+.journey-controls button {
+    background: transparent;
 }
 
 .journey-controls button:disabled {
@@ -567,28 +574,27 @@ h3 {
 }
 
 .journey-position {
-    min-width: 70px;
+    min-width: 4rem;
     text-align: center;
     color: var(--muted);
-    font-size: .9rem;
 }
 
-@media (max-width: 980px) {
-    .journey-carousel .journey-card {
-        flex-basis: calc((100% - 20px) / 2);
+@media (max-width: 900px) {
+    .journey-carousel {
+        --card-width: 55%;
     }
 }
 
-@media (max-width: 680px) {
-    .journey-carousel .journey-card {
-        flex-basis: min(88%, 340px);
+@media (max-width: 600px) {
+    .journey-carousel {
+        --card-width: 88%;
     }
     .journey-group + .journey-group {
         margin-top: 42px;
     }
 }
 
-/* Em telas de toque, o movimento ocorre pela rolagem; não precisa hover */
+/* A rolagem por toque não depende do hover */
 @media (hover: none) {
     .journey-carousel .journey-card:hover {
         transform: none;
