@@ -5,8 +5,8 @@ html[data-theme="light"] {
     --surface: #ffffff;
     --surface-2: #edf0f5;
     --border: #c8ced9;
-    --text: #1a2231;
-    --muted: #4b586b;
+    --text: #1b1d20;
+    --muted: #30343a;
     --accent: #a84300;
     --accent-light: #c45b10;
 }
@@ -63,12 +63,12 @@ html[data-theme="light"] .footer-inner a:hover {
 }
 
 html[data-theme="light"] .about-section {
-    background: #eef1f6;
+    background: #dfe4ee;
     border-block-color: var(--border);
 }
 
 html[data-theme="light"] .projects-section {
-    background: #edf0f5;
+    background: #dfe4ee;
 }
 
 html[data-theme="light"] .contact-section {
