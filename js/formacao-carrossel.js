@@ -17,7 +17,7 @@ document.querySelectorAll(".journey-group").forEach((grupo) => {
         let indice = 0;
         let menorDistancia = Infinity;
         cards.forEach((card, i) => {
-            const distancia = Math.abs(card.offsetLeft - carrossel.offsetLeft - carrossel.scrollLeft);
+            const distancia = Math.abs(card.getBoundingClientRect().left - carrossel.getBoundingClientRect().left);
             if (distancia < menorDistancia) {
                 menorDistancia = distancia;
                 indice = i;
@@ -38,7 +38,7 @@ document.querySelectorAll(".journey-group").forEach((grupo) => {
         const destino = cards[Math.max(0, Math.min(cards.length - 1, indiceAtual() + passo))];
         const distancia = destino.getBoundingClientRect().left - carrossel.getBoundingClientRect().left;
         const reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        carrossel.scrollBy({ left: distancia, behavior: reduzir ? "instant" : "smooth" });
+        carrossel.scrollBy({ left: distancia, behavior: reduzir ? "auto" : "smooth" });
     }
 
     anterior.addEventListener("click", () => navegar(-1));
