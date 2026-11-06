@@ -515,6 +515,86 @@ h3 {
     }
 }
 
+/* Dois carrosséis: formação e experiência */
+.journey-group + .journey-group {
+    margin-top: 55px;
+}
+
+.journey-group-title {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.journey-group-description {
+    color: var(--muted);
+    margin-bottom: 14px;
+    max-width: 700px;
+}
+
+/* Os cards mantêm o efeito de vidro, mas passam a deslizar na horizontal */
+.journey-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 18px 10px 28px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 10px;
+    scrollbar-color: var(--border) transparent;
+}
+
+.journey-carousel .journey-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    scroll-snap-align: start;
+}
+
+/* Cada carrossel tem seus próprios controles */
+.journey-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.journey-controls[hidden] {
+    display: none;
+}
+
+.journey-controls button:disabled {
+    opacity: .4;
+    cursor: default;
+}
+
+.journey-position {
+    min-width: 70px;
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+@media (max-width: 980px) {
+    .journey-carousel .journey-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 680px) {
+    .journey-carousel .journey-card {
+        flex-basis: min(88%, 340px);
+    }
+    .journey-group + .journey-group {
+        margin-top: 42px;
+    }
+}
+
+/* Em telas de toque, o movimento ocorre pela rolagem; não precisa hover */
+@media (hover: none) {
+    .journey-carousel .journey-card:hover {
+        transform: none;
+    }
+}
+
 /* 8. Contato e rodapé: Flexbox nos links */
 .contact-section {
     text-align: center;
