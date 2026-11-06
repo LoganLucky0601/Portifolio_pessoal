@@ -13,6 +13,7 @@
   <!-- Estilos e navegação do carrossel de projetos -->
   <link rel="stylesheet" href="css/projetos-carrossel.css">
   <script defer src="js/projetos-carrossel.js"></script>
+  <script defer src="js/formacao-carrossel.js"></script>
 </head>
 <body>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -97,11 +98,17 @@
       </div>
     </section>
 
-    <!-- Seção formacao -->
-
+    <!-- Formação e experiência: dois carrosséis independentes -->
     <section id="formacao" class="section" aria-labelledby="titulo-formacao">
-      <div class="container"><p class="section-kicker">JORNADA</p><div class="section-heading"><h2 id="titulo-formacao">Formação & <span>experiência</span></h2></p></div>
-        <div class="journey-grid">
+      <div class="container">
+        <p class="section-kicker">JORNADA</p>
+        <div class="section-heading">
+          <h2 id="titulo-formacao">Formação & <span>experiência</span></h2>
+        </div>
+
+      <div class="journey-group">
+        <h3 id="titulo-academica" class="journey-group-title">Formação acadêmica</h3>
+        <div class="journey-carousel" role="region" tabindex="0" aria-labelledby="titulo-academica">
           <article class="journey-card"><span class="journey-label">FORMAÇÃO ACADÊMICA</span>
             <h3>Técnico informática</h3>
             <p>Abrangência completa em hardware, redes locais, bancos de dados, algoritmos e desenvolvimento de aplicações para desktop e web.</p>
@@ -122,6 +129,23 @@
             <p>Domínio de análise de dados, otimização de fluxos e estruturação de informações para suporte à decisão</p>
             <p class="journey-note">Senac minas | 2025</p>
           </article>
+        </div>
+        <div class="journey-controls" hidden>
+          <button class="btn btn-outline" type="button" data-step="-1" aria-label="Anterior em Formação acadêmica">←</button>
+          <span class="journey-position" role="status" aria-live="polite"></span>
+          <button class="btn btn-outline" type="button" data-step="1" aria-label="Próximo em Formação acadêmica">→</button>
+        </div>
+      </div>
+
+      <div class="journey-group">
+        <h3 id="titulo-experiencia" class="journey-group-title">Experiência profissional</h3>
+        <p class="journey-group-description">Vivências profissionais, projetos acadêmicos e conhecimentos que complementam minha trajetória.</p>
+        <div class="journey-carousel" role="region" tabindex="0" aria-labelledby="titulo-experiencia">
+          <article class="journey-card"><span class="journey-label">EXPERIÊNCIA PROFISSIONAL</span>
+            <h3>Soluções de Crédito & Negócios</h3>
+            <p>Consultoria negócios focada em consórcios, estruturação de crédito, estratégias de expansão de parcerias e soluções corporativas no setor financeiro.</p>
+            <p class="journey-note">Atual</p>
+          </article>
           <article class="journey-card"><span class="journey-label">EXPERIÊNCIA ACADÊMICA</span>
             <h3>Academic Adventure</h3>
             <p>Eu juntamente de minha turma TI, desenvolvemos um jogo em python, inspirado em Pokemon, mas que se passa no próprio SenacMinas.</p>
@@ -137,13 +161,13 @@
             <p>Elaboração e estruturação de planilhas eletrônicas e relatórios gráficos básicos para otimização de fluxos analíticos.</p>
             <p class="journey-note">Conhecimentos</p>
           </article>
-          <article class="journey-card"><span class="journey-label">EXPERIÊNCIA PROFISSIONAL</span>
-            <h3>Soluções de Crédito & Negócios</h3>
-            <p>Consultoria negócios focada em consórcios, estruturação de crédito, estratégias de expansão de parcerias e soluções corporativas no setor financeiro.</p>
-            <p class="journey-note">Atual</p>
-          </article>
-
         </div>
+        <div class="journey-controls" hidden>
+          <button class="btn btn-outline" type="button" data-step="-1" aria-label="Anterior em Experiência profissional">←</button>
+          <span class="journey-position" role="status" aria-live="polite"></span>
+          <button class="btn btn-outline" type="button" data-step="1" aria-label="Próximo em Experiência profissional">→</button>
+        </div>
+      </div>
       </div>
     </section>
 
