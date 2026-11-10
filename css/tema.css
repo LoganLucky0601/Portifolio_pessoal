@@ -114,8 +114,17 @@ html[data-theme="light"] .journey-card.is-current {
 }
 
 html[data-theme="light"] .skill-icon {
-    background: #fff0df;
-    color: var(--accent);
+    background: #e4d8cd;
+    border-color: #c8b6a6;
+    color: #2f2924;
+}
+
+html[data-theme="light"] .skill-icon img { filter: none; }
+
+html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon {
+    background: #d7c0a9;
 }
 
 html[data-theme="light"] .project-card {
