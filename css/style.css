@@ -379,6 +379,16 @@ h3 {
     margin-bottom: 22px;
 }
 
+/* Imagens locais usadas nos seis cards de habilidades. */
+.skill-icon img {
+    display: block;
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+
 .skill-card p {
     color: var(--muted);
     font-size: .86rem;
