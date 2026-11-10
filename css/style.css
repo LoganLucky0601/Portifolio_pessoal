@@ -388,6 +388,11 @@ h3 {
     filter: invert(1);
 }
 
+/* Nos cards do tema claro, preservar a cor preta original dos arquivos. */
+html[data-theme="light"] .skill-icon img {
+    filter: none;
+}
+
 
 .skill-card p {
     color: var(--muted);
