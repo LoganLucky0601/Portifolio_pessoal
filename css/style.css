@@ -393,7 +393,7 @@ h3 {
 .skill-card:focus-visible,
 .skill-card.is-selected {
     border-color: rgba(var(--skill-glow), .65);
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, .3),
+    box-shadow: 12px 17px 51px rgba(59, 42, 3, 0.479),
                 0 0 22px rgba(var(--skill-glow), .24);
     transform: translateY(-5px);
 }
@@ -437,7 +437,7 @@ h3 {
 .skill-card:hover .skill-icon,
 .skill-card:focus-visible .skill-icon,
 .skill-card.is-selected .skill-icon {
-    background: #897560;
+    background: #fdc64e;
     transform: translateY(-2px);
     box-shadow: 0 0 0 2px rgba(var(--skill-glow), .36),
                 0 0 20px rgba(var(--skill-glow), .46);
