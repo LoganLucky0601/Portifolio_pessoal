@@ -331,7 +331,7 @@ h3 {
     margin-top: 12px;
 }
 
-/* 5. Habilidades: Grid e efeito de vidro nos cards */
+/* 5. Habilidades: cartões com efeito de vidro e realce luminoso */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -339,65 +339,119 @@ h3 {
 }
 
 .skill-card {
+    --skill-glow: 255, 163, 84;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
     min-height: 210px;
     padding: 29px;
+    position: relative;
+    isolation: isolate;
     border: 1px solid rgba(255, 255, 255, .20);
     border-radius: 17px;
     background: rgba(35, 40, 49, .62);
     box-shadow: 12px 17px 51px rgba(0, 0, 0, .22);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    transition: transform .5s, border-color .5s, box-shadow .5s;
+    cursor: pointer;
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
 }
 
-.skill-card:hover {
-    border-color: var(--accent);
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, .35),
-                0 0 18px rgba(255, 135, 40, .12);
-    transform: scale(1.05);
+/* Borda brilhante sem encobrir o conteúdo. */
+.skill-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from var(--skill-angle, 0deg),
+        transparent 0%, rgba(var(--skill-glow), .12) 18%,
+        rgba(var(--skill-glow), .95) 40%, #fff 48%,
+        rgba(var(--skill-glow), .95) 55%,
+        transparent 78%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
 }
 
-.skill-card:active {
-    transform: scale(.95) rotateZ(1.7deg);
+@property --skill-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
 }
 
+@keyframes skill-border-glow {
+    to { --skill-angle: 360deg; }
+}
+
+.skill-card:hover,
+.skill-card:focus-visible,
+.skill-card.is-selected {
+    border-color: rgba(var(--skill-glow), .65);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, .3),
+                0 0 22px rgba(var(--skill-glow), .24);
+    transform: translateY(-5px);
+}
+
+.skill-card:hover::before,
+.skill-card:focus-visible::before,
+.skill-card.is-selected::before {
+    opacity: 1;
+    animation: skill-border-glow 3.5s linear infinite;
+}
+
+.skill-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.skill-card:active { transform: scale(.98); }
+
+/* Área ao redor do ícone inspirada na referência enviada. */
 .skill-icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 11px;
-    background: #392819;
-    color: var(--accent);
-    font-size: 1.25rem;
-    font-weight: 800;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,.23);
+    border-radius: 14px;
+    background: #6b6054;
+    color: #fff;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 5px 14px rgba(0,0,0,.16);
     margin-bottom: 22px;
+    transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
 }
 
-/* Imagens locais usadas nos seis cards de habilidades. */
 .skill-icon img {
     display: block;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     filter: invert(1);
 }
 
-/* Nos cards do tema claro, preservar a cor preta original dos arquivos. */
-html[data-theme="light"] .skill-icon img {
-    filter: none;
+.skill-card:hover .skill-icon,
+.skill-card:focus-visible .skill-icon,
+.skill-card.is-selected .skill-icon {
+    background: #897560;
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 2px rgba(var(--skill-glow), .36),
+                0 0 20px rgba(var(--skill-glow), .46);
 }
-
 
 .skill-card p {
     color: var(--muted);
     font-size: .86rem;
     margin-top: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-card::before { animation: none !important; }
+    .skill-card, .skill-icon { transition: none; }
 }
 
 /* 6. Projetos: Grid na galeria e Flexbox dentro dos cards */
