@@ -13,11 +13,13 @@
   <!-- Estilos e navegação do carrossel de projetos -->
   <link rel="stylesheet" href="css/projetos-carrossel.css">
   <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/galeria.css">
   <script defer src="js/projetos-carrossel.js"></script>
   <script defer src="js/formacao-carrossel.js"></script>
   <script defer src="js/voltar-topo.js"></script>
   <script defer src="js/tema.js"></script>
   <script defer src="js/skills-interactions.js"></script>
+  <script defer src="js/galeria.js"></script>
 </head>
 <body>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -81,6 +83,39 @@
         </div>
       </div>
     </section>
+
+    <!-- Instantes congelados: galeria fotográfica em formato de carrossel. -->
+    <section id="instantes-congelados" class="section memories-section" aria-labelledby="titulo-instantes">
+      <div class="container">
+        <p class="section-kicker">REGISTROS DA MINHA TRAJETÓRIA</p>
+        <div class="section-heading"><h2 id="titulo-instantes">Instantes <span>congelados.</span></h2></div>
+        <div class="memories-top">
+          <p class="memories-intro">Pequenos fragmentos de tempo congelados.</p>
+          <span id="memories-count" class="memories-counter" aria-live="polite">01 / 05</span>
+        </div>
+        <div class="memories-viewport">
+          <div id="memories-track" class="memories-track" aria-label="Fotografias e memórias" tabindex="0"></div>
+        </div>
+        <div class="memories-controls">
+          <div id="memories-dots" class="memories-dots" aria-label="Navegar entre os registros"></div>
+          <div class="memories-buttons">
+            <button type="button" id="memories-prev" class="memories-button" aria-label="Fotografia anterior">‹</button>
+            <button type="button" id="memories-next" class="memories-button" aria-label="Próxima fotografia">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <dialog id="memory-modal" class="memory-modal" aria-labelledby="memory-modal-title">
+      <button type="button" class="memory-modal-close" aria-label="Fechar fotografia ampliada">×</button>
+      <div class="memory-modal-inner">
+        <div class="memory-media memory-modal-media"></div>
+        <div class="memory-modal-text">
+          <p class="memory-category memory-modal-category"></p>
+          <h3 id="memory-modal-title" class="memory-modal-title"></h3>
+          <p class="memory-modal-description"></p>
+        </div>
+      </div>
+    </dialog>
 
     <!-- Seção projetos -->
 
