@@ -70,3 +70,93 @@ html[data-theme="light"] .memories-section { background:radial-gradient(circle a
   .memory-modal-close {top:20px;right:20px;}
 }
 @media(prefers-reduced-motion:reduce) { .memories-track{scroll-behavior:auto;} .memory-card{transition:none;} }
+
+
+/* Visualização ampliada: mostra a fotografia inteira, sem crop, em qualquer tela. */
+.memory-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  box-sizing: border-box;
+  width: min(960px, calc(100vw - 28px));
+  max-width: calc(100vw - 28px);
+  max-height: min(94vh, 94dvh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 18px;
+}
+.memory-modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+}
+/* O card continua com object-fit: cover; somente a ampliação usa contain. */
+.memory-modal .memory-media {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  max-height: min(68vh, 68dvh);
+  aspect-ratio: auto;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #11151b;
+}
+.memory-modal .memory-media::after { display: none; }
+.memory-modal .memory-media.has-image { display: flex; }
+/* Corrige position:absolute herdado dos cartões do carrossel. */
+.memory-modal .memory-media img,
+.memory-modal .memory-media.has-image img {
+  position: static;
+  inset: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(min(68vh, 68dvh) - 24px);
+  object-fit: contain;
+  object-position: center center;
+  flex: 0 1 auto;
+}
+.memory-modal-text {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 30px 30px;
+  align-self: stretch;
+  text-align: center;
+}
+.memory-modal-text h3 { margin: 8px 0 12px; }
+.memory-modal-close {
+  position: sticky;
+  top: 12px;
+  right: auto;
+  margin: 12px 12px -54px auto;
+  z-index: 5;
+  background: var(--surface);
+  box-shadow: 0 3px 16px rgba(0,0,0,.4);
+}
+@media (max-width: 680px) {
+  .memory-modal {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: min(96vh, 96dvh);
+    border-radius: 14px;
+  }
+  .memory-modal .memory-media {
+    max-height: min(70vh, 70dvh);
+    padding: 8px;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+  .memory-modal .memory-media img,
+  .memory-modal .memory-media.has-image img {
+    max-height: calc(min(70vh, 70dvh) - 16px);
+  }
+  .memory-modal-text { padding: 18px 18px 26px; }
+  .memory-modal-close { top: 8px; right: auto; margin: 8px 8px -50px auto; }
+}
