@@ -48,6 +48,31 @@ html[data-theme="light"] {
     --cor-galeria-50: rgba(0,0,0,.4); /* Sombra do botão de fechar o modal de fotografia. */
     --habilidade-brilho: 255, 163, 84; /* Cor RGB-base usada no brilho dos cartões de Habilidades; mantida por compatibilidade. */
 
+
+    /* =========================================================
+       HABILIDADES — cores, degradê animado, brilhos e sombras
+       Edite os valores abaixo para personalizar a aparência.
+       Tamanhos e animações continuam em style.css.
+       ========================================================= */
+    --habilidade-borda: rgba(255, 255, 255, .20); /* Borda normal do cartão. */
+    --habilidade-fundo: rgba(35, 40, 49, .62); /* Fundo translúcido/vidro do cartão. */
+    --habilidade-sombra-base: rgba(0, 0, 0, .22); /* Sombra do cartão em repouso. */
+    --habilidade-degrade-inicio: transparent; /* Início e fim transparentes do degradê animado. */
+    --habilidade-degrade-suave: rgba(var(--habilidade-brilho), .12); /* Faixa suave da borda giratória. */
+    --habilidade-degrade-meio: rgba(var(--habilidade-brilho), .95); /* Faixa intensa do degradê giratório. */
+    --habilidade-degrade-destaque: #fff; /* Ponto luminoso claro da borda animada. */
+    --habilidade-borda-hover: rgba(var(--habilidade-brilho), .65); /* Borda luminosa no hover, foco ou seleção. */
+    --habilidade-sombra-hover: rgba(59, 42, 3, 0.479); /* Sombra ampla do cartão em destaque. */
+    --habilidade-brilho-hover: rgba(var(--habilidade-brilho), .24); /* Halo de luz do cartão destacado. */
+    --habilidade-icone-borda: rgba(255,255,255,.23); /* Borda da caixinha do ícone. */
+    --habilidade-icone-fundo: #6b6054; /* Fundo normal da caixinha do ícone. */
+    --habilidade-icone-texto: #fff; /* Cor do símbolo dentro da caixinha. */
+    --habilidade-icone-reflexo: rgba(139, 141, 6, 0.514); /* Reflexo interno superior da caixinha. */
+    --habilidade-icone-sombra: rgba(22, 22, 22, 0.288); /* Sombra externa da caixinha. */
+    --habilidade-icone-fundo-hover: #fdc64e; /* Fundo do ícone ao destacar o cartão. */
+    --habilidade-icone-anel: rgba(var(--habilidade-brilho), .36); /* Anel luminoso em torno do ícone. */
+    --habilidade-icone-brilho: rgba(var(--habilidade-brilho), .46); /* Halo externo do ícone em destaque. */
+
     /* Cores personalizadas do modo claro */
     --cor-clara-01: rgba(230,118,34,.10); /* Luz alaranjada no fundo da galeria no modo claro. */
     --cor-clara-02: transparent; /* Transparência de fundos e do trilho da barra de rolagem. */
