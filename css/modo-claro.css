@@ -21,7 +21,7 @@ html[data-theme="light"] {
     --cor-geral-17: rgba(0, 0, 0, .22); /* Sombra base dos cartões de Habilidades. */
     --cor-geral-20: #fff; /* Ponto claro da borda animada e cor dos ícones. */
     --cor-geral-22: rgba(59, 42, 3, 0.479); /* Sombra externa dos cartões de Habilidades em destaque. */
-    --cor-geral-24: rgba(255,255,255,.23); /* Borda da caixa dos ícones de Habilidades. */
+    --cor-geral-24: rgba(119, 96, 96, 0.23); /* Borda da caixa dos ícones de Habilidades. */
     --cor-geral-25: #6b6054; /* Fundo da caixa dos ícones de Habilidades. */
     --cor-geral-26: rgba(255,255,255,.15); /* Reflexo interno superior da caixa dos ícones. */
     --cor-geral-27: rgba(0,0,0,.16); /* Sombra externa discreta da caixa dos ícones. */
@@ -68,12 +68,12 @@ html[data-theme="light"] {
     --cor-clara-17: #fff; /* Texto de botões principais e dos cards de projetos com imagem. */
     --cor-clara-18: #963c00; /* Fundo dos botões principais ao passar o mouse. */
     --cor-clara-19: rgba(255, 255, 255, .84); /* Fundo dos cartões de Habilidades e Trajetória no modo claro. */
-    --cor-clara-20: #c5ccd7; /* Borda dos cartões de Habilidades e Trajetória no modo claro. */
-    --cor-clara-21: rgba(30, 45, 70, .09); /* Sombra dos cartões de Habilidades e Trajetória no modo claro. */
+    --cor-clara-20: #aeb8c7; /* Borda dos cartões de Habilidades e Trajetória no modo claro. */
+    --cor-clara-21: rgba(59, 45, 6, 0.253); /* Sombra dos cartões de Habilidades e Trajetória no modo claro. */
     --cor-clara-22: #e4d8cd; /* Fundo da caixa dos ícones de Habilidades no modo claro. */
     --cor-clara-23: #c8b6a6; /* Borda da caixa dos ícones de Habilidades no modo claro. */
     --cor-clara-24: #2f2924; /* Cor dos símbolos dos ícones de Habilidades no modo claro. */
-    --cor-clara-25: #d7c0a9; /* Fundo dos ícones de Habilidades em destaque no modo claro. */
+    --cor-clara-25: #be84499d; /* Fundo dos ícones de Habilidades em destaque no modo claro. */
     --cor-clara-26: #ffae6c; /* Texto das categorias e links nos cards dos projetos com imagem. */
     --cor-clara-27: #e0e4eb; /* Descrição nos cards dos projetos com imagem. */
     --cor-clara-28: #b64d05; /* Borda do card de projeto selecionado no modo claro. */
