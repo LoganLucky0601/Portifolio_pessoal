@@ -1,13 +1,5 @@
 /* 1. Cores e configurações gerais */
 :root {
-    --bg: #0b0d12;
-    --surface: #141820;
-    --surface-2: #191e27;
-    --border: #30343d;
-    --text: #f5f5f6;
-    --muted: #a4a9b4;
-    --accent: #ff8728;
-    --accent-light: #ffa75f;
     --font: 'Poppins',Arial,sans-serif;
 }
 
@@ -56,7 +48,7 @@ ul {
     left: 12px;
     z-index: 20;
     background: var(--accent);
-    color: #111;
+    color: var(--cor-geral-01);
     padding: 10px;
     border-radius: 8px;
 }
@@ -70,8 +62,8 @@ ul {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(11,13,18,.94);
-    border-bottom: 1px solid #242832;
+    background: var(--cor-geral-02);
+    border-bottom: 1px solid var(--cor-geral-03);
     backdrop-filter: blur(12px);
 }
 
@@ -103,7 +95,7 @@ ul {
 
 .menu a,.footer-inner a {
     font-size: .86rem;
-    color: #c8cbd2;
+    color: var(--cor-geral-04);
     transition: color .2s;
 }
 
@@ -116,7 +108,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    border: 1px solid transparent;
+    border: 1px solid var(--cor-geral-05);
     border-radius: 9px;
     padding: 13px 21px;
     font: 600 .88rem var(--font);
@@ -130,7 +122,7 @@ ul {
 
 .btn-primary {
     background: var(--accent);
-    color: #16110e;
+    color: var(--cor-geral-06);
 }
 
 .btn-primary:hover {
@@ -138,7 +130,7 @@ ul {
 }
 
 .btn-outline {
-    border-color: #525762;
+    border-color: var(--cor-geral-07);
     color: var(--text);
 }
 
@@ -212,7 +204,7 @@ h1 span,h2 span {
 }
 
 .hero-subtitle strong {
-    color: #e9ebed;
+    color: var(--cor-geral-08);
     font-weight: 600;
 }
 
@@ -234,7 +226,7 @@ h1 span,h2 span {
 
 .hero-tags span {
     font-size: .73rem;
-    color: #c1c5cb;
+    color: var(--cor-geral-09);
     border: 1px solid var(--border);
     padding: 8px 13px;
     border-radius: 100px;
@@ -243,7 +235,7 @@ h1 span,h2 span {
 .portrait-glow {
     position: absolute;
     inset: 12%;
-    background: radial-gradient(circle,rgba(228, 109, 13, 0.34),transparent 72%);
+    background: radial-gradient(circle,var(--cor-geral-10),var(--cor-geral-05) 72%);
     filter: blur(18px);
     z-index: -1;
 }
@@ -258,13 +250,13 @@ h1 span,h2 span {
     object-position: center 35%;
     border-radius: 50%;
     border: 2px solid var(--accent);
-    box-shadow: 0 1px 30px rgba(255, 161, 38, 0.582);
+    box-shadow: 0 1px 30px var(--cor-geral-11);
 }
 
 .portrait-caption {
     font-size: .7rem;
     letter-spacing: .18em;
-    color: #b2b3b8;
+    color: var(--cor-geral-12);
 }
 
 .portrait-caption span {
@@ -307,8 +299,8 @@ h3 {
 }
 
 .about-section {
-    background: #11151c;
-    border-block: 1px solid #20242d;
+    background: var(--cor-geral-13);
+    border-block: 1px solid var(--cor-geral-14);
 }
 
 .about-layout {
@@ -339,7 +331,7 @@ h3 {
 }
 
 .skill-card {
-    --skill-glow: 255, 163, 84;
+    --skill-glow: var(--habilidade-brilho);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -348,10 +340,10 @@ h3 {
     padding: 29px;
     position: relative;
     isolation: isolate;
-    border: 1px solid rgba(255, 255, 255, .20);
+    border: 1px solid var(--cor-geral-15);
     border-radius: 17px;
-    background: rgba(35, 40, 49, .62);
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, .22);
+    background: var(--cor-geral-16);
+    box-shadow: 12px 17px 51px var(--cor-geral-17);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     cursor: pointer;
@@ -366,13 +358,13 @@ h3 {
     border-radius: inherit;
     padding: 2px;
     background: conic-gradient(from var(--skill-angle, 0deg),
-        transparent 0%, rgba(var(--skill-glow), .12) 18%,
-        rgba(var(--skill-glow), .95) 40%, #fff 48%,
-        rgba(var(--skill-glow), .95) 55%,
-        transparent 78%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        var(--cor-geral-05) 0%, var(--cor-geral-18) 18%,
+        var(--cor-geral-19) 40%, var(--cor-geral-20) 48%,
+        var(--cor-geral-19) 55%,
+        var(--cor-geral-05) 78%);
+    -webkit-mask: linear-gradient(var(--cor-geral-20) 0 0) content-box, linear-gradient(var(--cor-geral-20) 0 0);
     -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(var(--cor-geral-20) 0 0) content-box, linear-gradient(var(--cor-geral-20) 0 0);
     mask-composite: exclude;
     opacity: 0;
     pointer-events: none;
@@ -392,9 +384,9 @@ h3 {
 .skill-card:hover,
 .skill-card:focus-visible,
 .skill-card.is-selected {
-    border-color: rgba(var(--skill-glow), .65);
-    box-shadow: 12px 17px 51px rgba(59, 42, 3, 0.479),
-                0 0 22px rgba(var(--skill-glow), .24);
+    border-color: var(--cor-geral-21);
+    box-shadow: 12px 17px 51px var(--cor-geral-22),
+                0 0 22px var(--cor-geral-23);
     transform: translateY(-5px);
 }
 
@@ -417,11 +409,11 @@ h3 {
     width: 58px;
     height: 58px;
     padding: 8px;
-    border: 1px solid rgba(255,255,255,.23);
+    border: 1px solid var(--cor-geral-24);
     border-radius: 14px;
-    background: #6b6054;
-    color: #fff;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 5px 14px rgba(0,0,0,.16);
+    background: var(--cor-geral-25);
+    color: var(--cor-geral-20);
+    box-shadow: inset 0 1px 0 var(--cor-geral-26), 0 5px 14px var(--cor-geral-27);
     margin-bottom: 22px;
     transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
 }
@@ -437,10 +429,10 @@ h3 {
 .skill-card:hover .skill-icon,
 .skill-card:focus-visible .skill-icon,
 .skill-card.is-selected .skill-icon {
-    background: #fdc64e;
+    background: var(--cor-geral-28);
     transform: translateY(-2px);
-    box-shadow: 0 0 0 2px rgba(var(--skill-glow), .36),
-                0 0 20px rgba(var(--skill-glow), .46);
+    box-shadow: 0 0 0 2px var(--cor-geral-29),
+                0 0 20px var(--cor-geral-30);
 }
 
 .skill-card p {
@@ -456,7 +448,7 @@ h3 {
 
 /* 6. Projetos: Grid na galeria e Flexbox dentro dos cards */
 .projects-section {
-    background: #10131a;
+    background: var(--cor-geral-31);
 }
 
 .projects-grid {
@@ -542,7 +534,7 @@ h3 {
     overflow-x: auto;
     padding: .75rem 0 1rem;
     scroll-snap-type: x mandatory;
-    scrollbar-color: var(--border) transparent;
+    scrollbar-color: var(--border) var(--cor-geral-05);
 }
 
 .journey-card {
@@ -558,8 +550,8 @@ h3 {
     gap: 12px;
     scroll-snap-align: start;
 
-    background: rgba(35, 40, 49, .62);
-    border: 1px solid rgba(255, 255, 255, .20);
+    background: var(--cor-geral-16);
+    border: 1px solid var(--cor-geral-15);
     border-radius: .65rem;
     /* Card estático: só a borda do item atual recebe destaque. */
     transition: border-color .2s;
@@ -617,7 +609,7 @@ h3 {
 }
 
 .journey-controls button {
-    background: transparent;
+    background: var(--cor-geral-05);
 }
 
 .journey-controls button:disabled {
@@ -661,8 +653,8 @@ h3 {
 /* 8. Contato e rodapé: Flexbox nos links */
 .contact-section {
     text-align: center;
-    background: radial-gradient(ellipse at center top,#251d1a,#0d1016 65%);
-    border-top: 1px solid #25252b;
+    background: radial-gradient(ellipse at center top,var(--cor-geral-32),var(--cor-geral-33) 65%);
+    border-top: 1px solid var(--cor-geral-34);
 }
 
 .contact-content>p:not(.section-kicker) {
@@ -682,7 +674,7 @@ h3 {
 
 .contact-content .contact-hint {
     font-size: .75rem;
-    color: #ba9b83;
+    color: var(--cor-geral-35);
     margin-top: 30px;
 }
 
