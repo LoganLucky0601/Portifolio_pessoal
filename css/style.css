@@ -343,7 +343,7 @@ h3 {
     border: 1px solid var(--habilidade-borda);
     border-radius: 17px;
     background: var(--habilidade-fundo);
-    box-shadow: 12px 17px 51px var(--habilidade-sombra-base);
+    box-shadow: var(--habilidade-sombra-base);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     cursor: pointer;
@@ -385,8 +385,8 @@ h3 {
 .skill-card:focus-visible,
 .skill-card.is-selected {
     border-color: var(--habilidade-borda-hover);
-    box-shadow: 12px 17px 51px var(--habilidade-sombra-hover),
-                0 0 22px var(--habilidade-brilho-hover);
+    box-shadow: var(--habilidade-sombra-hover),
+                var(--habilidade-brilho-hover);
     transform: translateY(-5px);
 }
 
