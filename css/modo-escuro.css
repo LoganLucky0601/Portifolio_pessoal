@@ -30,19 +30,13 @@
     --cor-geral-15: rgba(255, 255, 255, .20);
     --cor-geral-16: rgba(35, 40, 49, .62);
     --cor-geral-17: rgba(0, 0, 0, .22);
-    --cor-geral-18: rgba(var(--skill-glow), .12);
-    --cor-geral-19: rgba(var(--skill-glow), .95);
     --cor-geral-20: #fff;
-    --cor-geral-21: rgba(var(--skill-glow), .65);
     --cor-geral-22: rgba(59, 42, 3, 0.479);
-    --cor-geral-23: rgba(var(--skill-glow), .24);
     --cor-geral-24: rgba(255,255,255,.23);
     --cor-geral-25: #6b6054;
     --cor-geral-26: rgba(255,255,255,.15);
     --cor-geral-27: rgba(0,0,0,.16);
     --cor-geral-28: #fdc64e;
-    --cor-geral-29: rgba(var(--skill-glow), .36);
-    --cor-geral-30: rgba(var(--skill-glow), .46);
     --cor-geral-31: #10131a;
     --cor-geral-32: #251d1a;
     --cor-geral-33: #0d1016;
@@ -67,4 +61,15 @@
     --cor-galeria-48: rgba(4,5,9,.83);
     --cor-galeria-49: #11151b;
     --cor-galeria-50: rgba(0,0,0,.4);
+}
+
+/* Brilho calculado no próprio card, onde --skill-glow está definido.
+   Isso mantém o degradê animado e a sombra funcionando. */
+.skill-card {
+    --cor-geral-18: rgba(var(--skill-glow), .12);
+    --cor-geral-19: rgba(var(--skill-glow), .95);
+    --cor-geral-21: rgba(var(--skill-glow), .65);
+    --cor-geral-23: rgba(var(--skill-glow), .24);
+    --cor-geral-29: rgba(var(--skill-glow), .36);
+    --cor-geral-30: rgba(var(--skill-glow), .46);
 }
