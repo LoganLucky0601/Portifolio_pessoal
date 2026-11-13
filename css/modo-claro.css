@@ -56,14 +56,14 @@ html[data-theme="light"] {
        ========================================================= */
     --habilidade-borda: rgba(255, 255, 255, .20); /* Borda normal do cartão. */
     --habilidade-fundo: rgba(35, 40, 49, .62); /* Fundo translúcido/vidro do cartão. */
-    --habilidade-sombra-base: rgba(0, 0, 0, .22); /* Sombra do cartão em repouso. */
+    --habilidade-sombra-base: 12px 17px 51px rgba(0, 0, 0, .22); /* Sombra normal: deslocamento horizontal, vertical, desfoque e cor. */
     --habilidade-degrade-inicio: transparent; /* Início e fim transparentes do degradê animado. */
     --habilidade-degrade-suave: rgba(var(--habilidade-brilho), .12); /* Faixa suave da borda giratória. */
     --habilidade-degrade-meio: rgba(var(--habilidade-brilho), .95); /* Faixa intensa do degradê giratório. */
     --habilidade-degrade-destaque: #fff; /* Ponto luminoso claro da borda animada. */
     --habilidade-borda-hover: rgba(var(--habilidade-brilho), .65); /* Borda luminosa no hover, foco ou seleção. */
-    --habilidade-sombra-hover: rgba(59, 42, 3, 0.479); /* Sombra ampla do cartão em destaque. */
-    --habilidade-brilho-hover: rgba(var(--habilidade-brilho), .24); /* Halo de luz do cartão destacado. */
+    --habilidade-sombra-hover: 12px 17px 51px rgba(59, 42, 3, 0.479); /* Sombra do card ao passar o mouse: posição, desfoque e cor. */
+    --habilidade-brilho-hover: 0 0 22px rgba(var(--habilidade-brilho), .24); /* Brilho ao passar o mouse: 0px horizontal, 0px vertical, 22px de desfoque e cor. */
     --habilidade-icone-borda: rgba(255,255,255,.23); /* Borda da caixinha do ícone. */
     --habilidade-icone-fundo: #6b6054; /* Fundo normal da caixinha do ícone. */
     --habilidade-icone-texto: #fff; /* Cor do símbolo dentro da caixinha. */
