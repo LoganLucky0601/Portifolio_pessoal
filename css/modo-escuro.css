@@ -2,74 +2,74 @@
    Centralize aqui as cores do site. Alterações de tamanho e layout ficam em style.css. */
 :root {
     /* Cores principais */
-    --bg: #0b0d12;
-    --surface: #141820;
-    --surface-2: #191e27;
-    --border: #30343d;
-    --text: #f5f5f6;
-    --muted: #a4a9b4;
-    --accent: #ff8728;
-    --accent-light: #ffa75f;
-    --habilidade-brilho: 255, 163, 84;
+    --bg: #0b0d12; /* Fundo principal da página e da galeria. */
+    --surface: #141820; /* Fundo padrão dos cartões, janelas e botões da galeria. */
+    --surface-2: #191e27; /* Fundo secundário e realce dos botões da galeria. */
+    --border: #30343d; /* Bordas gerais, etiquetas e trilhos dos carrosséis. */
+    --text: #f5f5f6; /* Cor principal dos textos e títulos. */
+    --muted: #a4a9b4; /* Textos secundários, descrições e legendas. */
+    --accent: #ff8728; /* Cor de destaque: logo, títulos, links, bordas e botões. */
+    --accent-light: #ffa75f; /* Variação da cor de destaque no hover do botão principal. */
+    --habilidade-brilho: 255, 163, 84; /* Cor RGB-base usada no brilho dos cartões de Habilidades; mantida por compatibilidade. */
 
     /* Cabeçalho, botões, textos e cartões */
-    --cor-geral-01: #111;
-    --cor-geral-02: rgba(11,13,18,.94);
-    --cor-geral-03: #242832;
-    --cor-geral-04: #c8cbd2;
-    --cor-geral-05: transparent;
-    --cor-geral-06: #16110e;
-    --cor-geral-07: #525762;
-    --cor-geral-08: #e9ebed;
-    --cor-geral-09: #c1c5cb;
-    --cor-geral-10: rgba(228, 109, 13, 0.34);
-    --cor-geral-11: rgba(255, 161, 38, 0.582);
-    --cor-geral-12: #b2b3b8;
-    --cor-geral-13: #11151c;
-    --cor-geral-14: #20242d;
-    --cor-geral-15: rgba(255, 255, 255, .20);
-    --cor-geral-16: rgba(35, 40, 49, .62);
-    --cor-geral-17: rgba(0, 0, 0, .22);
-    --cor-geral-20: #fff;
-    --cor-geral-22: rgba(59, 42, 3, 0.479);
-    --cor-geral-24: rgba(255,255,255,.23);
-    --cor-geral-25: #6b6054;
-    --cor-geral-26: rgba(255,255,255,.15);
-    --cor-geral-27: rgba(0,0,0,.16);
-    --cor-geral-28: #fdc64e;
-    --cor-geral-31: #10131a;
-    --cor-geral-32: #251d1a;
-    --cor-geral-33: #0d1016;
-    --cor-geral-34: #25252b;
-    --cor-geral-35: #ba9b83;
+    --cor-geral-01: #111; /* Texto do link Pular para o conteúdo. */
+    --cor-geral-02: rgba(11,13,18,.94); /* Fundo semitransparente do cabeçalho fixo. */
+    --cor-geral-03: #242832; /* Borda inferior do cabeçalho. */
+    --cor-geral-04: #c8cbd2; /* Texto dos links do menu e do rodapé. */
+    --cor-geral-05: transparent; /* Transparência: bordas neutras, degradês e fundo de controles dos carrosséis. */
+    --cor-geral-06: #16110e; /* Texto do botão principal. */
+    --cor-geral-07: #525762; /* Borda dos botões com contorno. */
+    --cor-geral-08: #e9ebed; /* Texto destacado no subtítulo da apresentação. */
+    --cor-geral-09: #c1c5cb; /* Texto das etiquetas abaixo da apresentação. */
+    --cor-geral-10: rgba(228, 109, 13, 0.34); /* Luz alaranjada atrás da foto de perfil. */
+    --cor-geral-11: rgba(255, 161, 38, 0.582); /* Sombra/brilho externo da foto de perfil. */
+    --cor-geral-12: #b2b3b8; /* Texto da legenda sob a foto de perfil. */
+    --cor-geral-13: #11151c; /* Fundo da seção Sobre mim. */
+    --cor-geral-14: #20242d; /* Bordas superior e inferior da seção Sobre mim. */
+    --cor-geral-15: rgba(255, 255, 255, .20); /* Borda translúcida dos cartões de Habilidades e Trajetória. */
+    --cor-geral-16: rgba(35, 40, 49, .62); /* Fundo translúcido dos cartões de Habilidades e Trajetória. */
+    --cor-geral-17: rgba(0, 0, 0, .22); /* Sombra base dos cartões de Habilidades. */
+    --cor-geral-20: #fff; /* Ponto claro da borda animada e cor dos ícones. */
+    --cor-geral-22: rgba(59, 42, 3, 0.479); /* Sombra externa dos cartões de Habilidades em destaque. */
+    --cor-geral-24: rgba(255,255,255,.23); /* Borda da caixa dos ícones de Habilidades. */
+    --cor-geral-25: #6b6054; /* Fundo da caixa dos ícones de Habilidades. */
+    --cor-geral-26: rgba(255,255,255,.15); /* Reflexo interno superior da caixa dos ícones. */
+    --cor-geral-27: rgba(0,0,0,.16); /* Sombra externa discreta da caixa dos ícones. */
+    --cor-geral-28: #fdc64e; /* Fundo dos ícones quando o cartão está em destaque. */
+    --cor-geral-31: #10131a; /* Fundo da seção Projetos e Conquistas. */
+    --cor-geral-32: #251d1a; /* Cor inicial do degradê da seção Contato. */
+    --cor-geral-33: #0d1016; /* Cor final do degradê da seção Contato. */
+    --cor-geral-34: #25252b; /* Borda superior da seção Contato. */
+    --cor-geral-35: #ba9b83; /* Texto de orientação adicional na seção Contato. */
 
     /* Carrossel de projetos e conquistas */
-    --cor-projeto-36: rgba(11,13,18,.84);
-    --cor-projeto-37: #0b0d12;
+    --cor-projeto-36: rgba(11,13,18,.84); /* Camada intermediária escura do degradê sobre as imagens dos projetos. */
+    --cor-projeto-37: #0b0d12; /* Base escura do degradê sobre as imagens dos projetos. */
 
     /* Seção Instantes congelados */
-    --cor-galeria-38: rgba(241,130,47,.11);
-    --cor-galeria-39: rgba(248,133,43,.22);
-    --cor-galeria-40: #30333d;
-    --cor-galeria-41: #181c25;
-    --cor-galeria-42: #453122;
-    --cor-galeria-43: rgba(0,0,0,.34);
-    --cor-galeria-44: rgba(255,255,255,.35);
-    --cor-galeria-45: rgba(255,255,255,.07);
-    --cor-galeria-46: #ded6d0;
-    --cor-galeria-47: #0009;
-    --cor-galeria-48: rgba(4,5,9,.83);
-    --cor-galeria-49: #11151b;
-    --cor-galeria-50: rgba(0,0,0,.4);
+    --cor-galeria-38: rgba(241,130,47,.11); /* Luz alaranjada no fundo de Instantes congelados. */
+    --cor-galeria-39: rgba(248,133,43,.22); /* Brilho externo dos cartões de fotografias no hover. */
+    --cor-galeria-40: #30333d; /* Primeiro tom do degradê de imagem quando não há fotografia. */
+    --cor-galeria-41: #181c25; /* Tom central do degradê de imagem quando não há fotografia. */
+    --cor-galeria-42: #453122; /* Tom final do degradê de imagem quando não há fotografia. */
+    --cor-galeria-43: rgba(0,0,0,.34); /* Sombra no rodapé das miniaturas de fotografias. */
+    --cor-galeria-44: rgba(255,255,255,.35); /* Borda do símbolo exibido quando a fotografia está ausente. */
+    --cor-galeria-45: rgba(255,255,255,.07); /* Fundo do símbolo exibido quando a fotografia está ausente. */
+    --cor-galeria-46: #ded6d0; /* Texto da imagem ilustrativa sem fotografia. */
+    --cor-galeria-47: #0009; /* Sombra ampla da janela de fotografia ampliada. */
+    --cor-galeria-48: rgba(4,5,9,.83); /* Escurecimento do fundo atrás da fotografia ampliada. */
+    --cor-galeria-49: #11151b; /* Fundo da área da fotografia no modal ampliado. */
+    --cor-galeria-50: rgba(0,0,0,.4); /* Sombra do botão de fechar o modal de fotografia. */
 }
 
 /* Brilho calculado no próprio card, onde --skill-glow está definido.
    Isso mantém o degradê animado e a sombra funcionando. */
 .skill-card {
-    --cor-geral-18: rgba(var(--skill-glow), .12);
-    --cor-geral-19: rgba(var(--skill-glow), .95);
-    --cor-geral-21: rgba(var(--skill-glow), .65);
-    --cor-geral-23: rgba(var(--skill-glow), .24);
-    --cor-geral-29: rgba(var(--skill-glow), .36);
-    --cor-geral-30: rgba(var(--skill-glow), .46);
+    --cor-geral-18: rgba(var(--skill-glow), .12); /* Trecho suave do degradê animado da borda de Habilidades. */
+    --cor-geral-19: rgba(var(--skill-glow), .95); /* Trecho forte do degradê animado da borda de Habilidades. */
+    --cor-geral-21: rgba(var(--skill-glow), .65); /* Borda luminosa de Habilidades no hover, foco ou seleção. */
+    --cor-geral-23: rgba(var(--skill-glow), .24); /* Halo luminoso dos cartões de Habilidades em destaque. */
+    --cor-geral-29: rgba(var(--skill-glow), .36); /* Anel luminoso dos ícones quando o cartão está em destaque. */
+    --cor-geral-30: rgba(var(--skill-glow), .46); /* Brilho externo dos ícones quando o cartão está em destaque. */
 }
