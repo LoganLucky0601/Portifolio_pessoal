@@ -331,7 +331,7 @@ h3 {
 }
 
 .skill-card {
-    --skill-glow: 255, 163, 84;
+    --skill-glow: var(--habilidade-brilho);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -340,10 +340,10 @@ h3 {
     padding: 29px;
     position: relative;
     isolation: isolate;
-    border: 1px solid rgba(255, 255, 255, .20);
+    border: 1px solid var(--habilidade-borda);
     border-radius: 17px;
-    background: rgba(35, 40, 49, .62);
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, .22);
+    background: var(--habilidade-fundo);
+    box-shadow: 12px 17px 51px var(--habilidade-sombra-base);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     cursor: pointer;
@@ -358,10 +358,10 @@ h3 {
     border-radius: inherit;
     padding: 2px;
     background: conic-gradient(from var(--skill-angle, 0deg),
-        transparent 0%, rgba(var(--skill-glow), .12) 18%,
-        rgba(var(--skill-glow), .95) 40%, #fff 48%,
-        rgba(var(--skill-glow), .95) 55%,
-        transparent 78%);
+        var(--habilidade-degrade-inicio) 0%, var(--habilidade-degrade-suave) 18%,
+        var(--habilidade-degrade-meio) 40%, var(--habilidade-degrade-destaque) 48%,
+        var(--habilidade-degrade-meio) 55%,
+        var(--habilidade-degrade-inicio) 78%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -384,9 +384,9 @@ h3 {
 .skill-card:hover,
 .skill-card:focus-visible,
 .skill-card.is-selected {
-    border-color: rgba(var(--skill-glow), .65);
-    box-shadow: 12px 17px 51px rgba(59, 42, 3, 0.479),
-                0 0 22px rgba(var(--skill-glow), .24);
+    border-color: var(--habilidade-borda-hover);
+    box-shadow: 12px 17px 51px var(--habilidade-sombra-hover),
+                0 0 22px var(--habilidade-brilho-hover);
     transform: translateY(-5px);
 }
 
@@ -409,11 +409,11 @@ h3 {
     width: 58px;
     height: 58px;
     padding: 8px;
-    border: 1px solid rgba(255,255,255,.23);
+    border: 1px solid var(--habilidade-icone-borda);
     border-radius: 14px;
-    background: #6b6054;
-    color: #fff;
-    box-shadow: inset 0 1px 0 rgba(139, 141, 6, 0.514), 0 5px 14px rgba(22, 22, 22, 0.288);
+    background: var(--habilidade-icone-fundo);
+    color: var(--habilidade-icone-texto);
+    box-shadow: inset 0 1px 0 var(--habilidade-icone-reflexo), 0 5px 14px var(--habilidade-icone-sombra);
     margin-bottom: 22px;
     transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
 }
@@ -429,10 +429,10 @@ h3 {
 .skill-card:hover .skill-icon,
 .skill-card:focus-visible .skill-icon,
 .skill-card.is-selected .skill-icon {
-    background: #fdc64e;
+    background: var(--habilidade-icone-fundo-hover);
     transform: translateY(-2px);
-    box-shadow: 0 0 0 2px rgba(var(--skill-glow), .36),
-                0 0 20px rgba(var(--skill-glow), .46);
+    box-shadow: 0 0 0 2px var(--habilidade-icone-anel);
+                0 0 20px var(--habilidade-icone-brilho);
 }
 
 .skill-card p {
