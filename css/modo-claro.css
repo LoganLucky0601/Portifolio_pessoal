@@ -1,0 +1,261 @@
+/* PALETA DE CORES — MODO CLARO
+   Mantenha as cores deste modo separadas das do modo escuro. */
+html[data-theme="light"] {
+    /* Referências às mesmas cores gerais para preservar a aparência atual */
+    --cor-geral-01: #111;
+    --cor-geral-02: rgba(11,13,18,.94);
+    --cor-geral-03: #242832;
+    --cor-geral-04: #c8cbd2;
+    --cor-geral-05: transparent;
+    --cor-geral-06: #16110e;
+    --cor-geral-07: #525762;
+    --cor-geral-08: #e9ebed;
+    --cor-geral-09: #c1c5cb;
+    --cor-geral-10: rgba(228, 109, 13, 0.34);
+    --cor-geral-11: rgba(255, 161, 38, 0.582);
+    --cor-geral-12: #b2b3b8;
+    --cor-geral-13: #11151c;
+    --cor-geral-14: #20242d;
+    --cor-geral-15: rgba(255, 255, 255, .20);
+    --cor-geral-16: rgba(35, 40, 49, .62);
+    --cor-geral-17: rgba(0, 0, 0, .22);
+    --cor-geral-18: rgba(var(--skill-glow), .12);
+    --cor-geral-19: rgba(var(--skill-glow), .95);
+    --cor-geral-20: #fff;
+    --cor-geral-21: rgba(var(--skill-glow), .65);
+    --cor-geral-22: rgba(59, 42, 3, 0.479);
+    --cor-geral-23: rgba(var(--skill-glow), .24);
+    --cor-geral-24: rgba(255,255,255,.23);
+    --cor-geral-25: #6b6054;
+    --cor-geral-26: rgba(255,255,255,.15);
+    --cor-geral-27: rgba(0,0,0,.16);
+    --cor-geral-28: #fdc64e;
+    --cor-geral-29: rgba(var(--skill-glow), .36);
+    --cor-geral-30: rgba(var(--skill-glow), .46);
+    --cor-geral-31: #10131a;
+    --cor-geral-32: #251d1a;
+    --cor-geral-33: #0d1016;
+    --cor-geral-34: #25252b;
+    --cor-geral-35: #ba9b83;
+    --cor-projeto-36: rgba(11,13,18,.84);
+    --cor-projeto-37: #0b0d12;
+    --cor-galeria-38: rgba(241,130,47,.11);
+    --cor-galeria-39: rgba(248,133,43,.22);
+    --cor-galeria-40: #30333d;
+    --cor-galeria-41: #181c25;
+    --cor-galeria-42: #453122;
+    --cor-galeria-43: rgba(0,0,0,.34);
+    --cor-galeria-44: rgba(255,255,255,.35);
+    --cor-galeria-45: rgba(255,255,255,.07);
+    --cor-galeria-46: #ded6d0;
+    --cor-galeria-47: #0009;
+    --cor-galeria-48: rgba(4,5,9,.83);
+    --cor-galeria-49: #11151b;
+    --cor-galeria-50: rgba(0,0,0,.4);
+    --habilidade-brilho: 255, 163, 84;
+
+    /* Cores personalizadas do modo claro */
+    --cor-clara-01: rgba(230,118,34,.10);
+    --cor-clara-02: transparent;
+    --cor-clara-03: #f6f7fa;
+    --cor-clara-04: #ffffff;
+    --cor-clara-05: #edf0f5;
+    --cor-clara-06: #c8ced9;
+    --cor-clara-07: #1b1d20;
+    --cor-clara-08: #30343a;
+    --cor-clara-09: #a84300;
+    --cor-clara-10: #c45b10;
+    --cor-clara-11: rgba(255, 255, 255, .94);
+    --cor-clara-12: #dfe4ee;
+    --cor-clara-13: #a8abaf;
+    --cor-clara-14: #fff0df;
+    --cor-clara-15: #8e97a8;
+    --cor-clara-16: #bb4f05;
+    --cor-clara-17: #fff;
+    --cor-clara-18: #963c00;
+    --cor-clara-19: rgba(255, 255, 255, .84);
+    --cor-clara-20: #c5ccd7;
+    --cor-clara-21: rgba(30, 45, 70, .09);
+    --cor-clara-22: #e4d8cd;
+    --cor-clara-23: #c8b6a6;
+    --cor-clara-24: #2f2924;
+    --cor-clara-25: #d7c0a9;
+    --cor-clara-26: #ffae6c;
+    --cor-clara-27: #e0e4eb;
+    --cor-clara-28: #b64d05;
+    --cor-clara-29: #aab1be;
+}
+
+/* Tema claro: altera apenas as cores, sem mexer no layout. */
+html[data-theme="light"] {
+    color-scheme: light;
+    --bg: var(--cor-clara-03);
+    --surface: var(--cor-clara-04);
+    --surface-2: var(--cor-clara-05);
+    --border: var(--cor-clara-06);
+    --text: var(--cor-clara-07);
+    --muted: var(--cor-clara-08);
+    --accent: var(--cor-clara-09);
+    --accent-light: var(--cor-clara-10);
+}
+
+/* Botão de tema no menu, ao lado de Contato. */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 36px;
+    padding: 6px 11px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--cor-clara-02);
+    color: var(--text);
+    font: 600 .78rem var(--font);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color .2s, background .2s;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    border-color: var(--accent);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* O ícone informa qual tema pode ser ativado. */
+.theme-icon-light { display: inline; }
+.theme-icon-dark { display: none; }
+
+html[data-theme="light"] .theme-icon-light { display: none; }
+html[data-theme="light"] .theme-icon-dark { display: inline; }
+
+/* Fundos e textos que antes usavam cores fixas. */
+html[data-theme="light"] .site-header {
+    background: var(--cor-clara-11);
+    border-bottom-color: var(--border);
+}
+
+html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a {
+    color: var(--text);
+}
+
+html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover {
+    color: var(--accent);
+}
+
+html[data-theme="light"] .about-section {
+    background: var(--cor-clara-12);
+    border-block-color: var(--border);
+}
+
+html[data-theme="light"] .projects-section {
+    background: var(--cor-clara-13);
+}
+
+html[data-theme="light"] .contact-section {
+    background: radial-gradient(ellipse at center top, var(--cor-clara-14), var(--cor-clara-03) 68%);
+    border-top-color: var(--border);
+}
+
+html[data-theme="light"] .hero-subtitle strong {
+    color: var(--text);
+}
+
+html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p {
+    color: var(--muted);
+}
+
+html[data-theme="light"] .btn-outline {
+    border-color: var(--cor-clara-15);
+    color: var(--text);
+}
+
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular {
+    background: var(--cor-clara-16);
+    color: var(--cor-clara-17);
+}
+
+html[data-theme="light"] .btn-primary:hover {
+    background: var(--cor-clara-18);
+}
+
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card {
+    background: var(--cor-clara-19);
+    border-color: var(--cor-clara-20);
+    box-shadow: 8px 14px 28px var(--cor-clara-21);
+}
+
+html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current {
+    border-color: var(--accent);
+}
+
+html[data-theme="light"] .skill-icon {
+    background: var(--cor-clara-22);
+    border-color: var(--cor-clara-23);
+    color: var(--cor-clara-24);
+}
+
+html[data-theme="light"] .skill-icon img { filter: none; }
+
+html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon {
+    background: var(--cor-clara-25);
+}
+
+html[data-theme="light"] .project-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+/* Projetos com imagem continuam usando fundo escuro para legibilidade. */
+html[data-theme="light"] .projects-carousel .project-card {
+    color: var(--cor-clara-17);
+}
+
+html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link {
+    color: var(--cor-clara-26);
+}
+
+html[data-theme="light"] .projects-carousel .project-card .project-body > p:not(.project-category) {
+    color: var(--cor-clara-27);
+}
+
+html[data-theme="light"] .projects-carousel .project-card.is-current {
+    border-color: var(--cor-clara-28);
+}
+
+html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label {
+    color: var(--accent);
+}
+
+html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel {
+    scrollbar-color: var(--cor-clara-29) var(--cor-clara-02);
+}
+
+html[data-theme="light"] .site-footer {
+    border-top-color: var(--border);
+}
+
+@media (max-width: 680px) {
+    .theme-toggle {
+        min-height: 34px;
+        padding: 5px 9px;
+        font-size: .74rem;
+    }
+}
