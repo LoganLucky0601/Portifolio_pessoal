@@ -5,7 +5,7 @@
     gap: .65rem;
     padding: .75rem 0 1rem;
     scroll-snap-type: x mandatory;
-    scrollbar-color: var(--border) transparent;
+    scrollbar-color: var(--border) var(--cor-geral-05);
 }
 
 .projects-carousel .project-card {
@@ -31,7 +31,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(180deg, transparent 5%, rgba(11,13,18,.84) 55%, #0b0d12 100%);
+    background: linear-gradient(180deg, var(--cor-geral-05) 5%, var(--cor-projeto-36) 55%, var(--cor-projeto-37) 100%);
 }
 
 .projects-carousel .project-body { gap: .45rem; padding: 1rem; }
@@ -49,7 +49,7 @@
 }
 
 .projects-controls[hidden] { display: none; }
-.projects-controls button { background: transparent; }
+.projects-controls button { background: var(--cor-geral-05); }
 .projects-controls button:disabled { opacity: .4; cursor: default; }
 .projects-position { min-width: 4rem; text-align: center; color: var(--muted); }
 
