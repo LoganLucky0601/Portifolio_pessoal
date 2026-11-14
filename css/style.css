@@ -431,7 +431,7 @@ h3 {
 .skill-card.is-selected .skill-icon {
     background: var(--habilidade-icone-fundo-hover);
     transform: translateY(-2px);
-    box-shadow: 0 0 0 2px var(--habilidade-icone-anel);
+    box-shadow: 0 0 0 2px var(--habilidade-icone-anel),
                 0 0 20px var(--habilidade-icone-brilho);
 }
 

@@ -12,7 +12,7 @@ html[data-theme="light"] {
     --cor-geral-08: #e9ebed; /* Texto destacado no subtítulo da apresentação. */
     --cor-geral-09: #c1c5cb; /* Texto das etiquetas abaixo da apresentação. */
     --cor-geral-10: rgba(228, 109, 13, 0.34); /* Luz alaranjada atrás da foto de perfil. */
-    --cor-geral-11: rgba(255, 161, 38, 0.582); /* Sombra/brilho externo da foto de perfil. */
+    --cor-geral-11: rgba(14, 13, 13, 0.582); /* Sombra/brilho externo da foto de perfil. */
     --cor-geral-12: #b2b3b8; /* Texto da legenda sob a foto de perfil. */
     --cor-geral-13: #11151c; /* Fundo da seção Sobre mim. */
     --cor-geral-14: #20242d; /* Bordas superior e inferior da seção Sobre mim. */
@@ -20,7 +20,7 @@ html[data-theme="light"] {
     --cor-geral-16: rgba(35, 40, 49, .62); /* Fundo translúcido dos cartões de Habilidades e Trajetória. */
     --cor-geral-17: rgba(0, 0, 0, .22); /* Sombra base dos cartões de Habilidades. */
     --cor-geral-20: #fff; /* Ponto claro da borda animada e cor dos ícones. */
-    --cor-geral-22: rgba(59, 42, 3, 0.479); /* Sombra externa dos cartões de Habilidades em destaque. */
+    --cor-geral-22: rgba(216, 164, 41, 0.918); /* Sombra externa dos cartões de Habilidades em destaque. */
     --cor-geral-24: rgba(119, 96, 96, 0.23); /* Borda da caixa dos ícones de Habilidades. */
     --cor-geral-25: #6b6054; /* Fundo da caixa dos ícones de Habilidades. */
     --cor-geral-26: rgba(255,255,255,.15); /* Reflexo interno superior da caixa dos ícones. */
@@ -62,10 +62,10 @@ html[data-theme="light"] {
     --habilidade-degrade-meio: rgba(var(--habilidade-brilho), .95); /* Faixa intensa do degradê giratório. */
     --habilidade-degrade-destaque: #fff; /* Ponto luminoso claro da borda animada. */
     --habilidade-borda-hover: rgba(var(--habilidade-brilho), .65); /* Borda luminosa no hover, foco ou seleção. */
-    --habilidade-sombra-hover: 12px 17px 51px rgba(59, 42, 3, 0.479); /* Sombra do card ao passar o mouse: posição, desfoque e cor. */
+    --habilidade-sombra-hover: 12px 17px 51px rgba(59, 42, 3, 0.877); /* Sombra do card ao passar o mouse: posição, desfoque e cor. */
     --habilidade-brilho-hover: 0 0 22px rgba(var(--habilidade-brilho), .24); /* Brilho ao passar o mouse: 0px horizontal, 0px vertical, 22px de desfoque e cor. */
     --habilidade-icone-borda: rgba(255,255,255,.23); /* Borda da caixinha do ícone. */
-    --habilidade-icone-fundo: #6b6054; /* Fundo normal da caixinha do ícone. */
+    --habilidade-icone-fundo: #9c9997; /* Fundo normal da caixinha do ícone. */
     --habilidade-icone-texto: #fff; /* Cor do símbolo dentro da caixinha. */
     --habilidade-icone-reflexo: rgba(139, 141, 6, 0.514); /* Reflexo interno superior da caixinha. */
     --habilidade-icone-sombra: rgba(22, 22, 22, 0.288); /* Sombra externa da caixinha. */
@@ -86,7 +86,7 @@ html[data-theme="light"] {
     --cor-clara-10: #c45b10; /* Variação do destaque para interações no modo claro. */
     --cor-clara-11: rgba(255, 255, 255, .94); /* Fundo semitransparente do cabeçalho no modo claro. */
     --cor-clara-12: #dfe4ee; /* Fundo da seção Sobre mim no modo claro. */
-    --cor-clara-13: #a8abaf; /* Fundo da seção Projetos e Conquistas no modo claro. */
+    --cor-clara-13: #d2d4d6; /* Fundo da seção Projetos e Conquistas no modo claro. */
     --cor-clara-14: #fff0df; /* Tom inicial do degradê da seção Contato no modo claro. */
     --cor-clara-15: #8e97a8; /* Borda dos botões com contorno no modo claro. */
     --cor-clara-16: #bb4f05; /* Fundo dos botões principais no modo claro. */
@@ -95,10 +95,10 @@ html[data-theme="light"] {
     --cor-clara-19: rgba(255, 255, 255, .84); /* Fundo dos cartões de Habilidades e Trajetória no modo claro. */
     --cor-clara-20: #aeb8c7; /* Borda dos cartões de Habilidades e Trajetória no modo claro. */
     --cor-clara-21: rgba(59, 45, 6, 0.253); /* Sombra dos cartões de Habilidades e Trajetória no modo claro. */
-    --cor-clara-22: #e4d8cd; /* Fundo da caixa dos ícones de Habilidades no modo claro. */
-    --cor-clara-23: #c8b6a6; /* Borda da caixa dos ícones de Habilidades no modo claro. */
+    --cor-clara-22: #e4e0de; /* Fundo da caixa dos ícones de Habilidades no modo claro. */
+    --cor-clara-23: #a1a0a0; /* Borda da caixa dos ícones de Habilidades no modo claro. */
     --cor-clara-24: #2f2924; /* Cor dos símbolos dos ícones de Habilidades no modo claro. */
-    --cor-clara-25: #be84499d; /* Fundo dos ícones de Habilidades em destaque no modo claro. */
+    --cor-clara-25: #fa640075; /* Fundo dos ícones de Habilidades em destaque no modo claro. */
     --cor-clara-26: #ffae6c; /* Texto das categorias e links nos cards dos projetos com imagem. */
     --cor-clara-27: #e0e4eb; /* Descrição nos cards dos projetos com imagem. */
     --cor-clara-28: #b64d05; /* Borda do card de projeto selecionado no modo claro. */

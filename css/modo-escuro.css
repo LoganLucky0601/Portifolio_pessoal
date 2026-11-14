@@ -9,7 +9,7 @@
     --text: #f5f5f6; /* Cor principal dos textos e títulos. */
     --muted: #a4a9b4; /* Textos secundários, descrições e legendas. */
     --accent: #ff8728; /* Cor de destaque: logo, títulos, links, bordas e botões. */
-    --accent-light: #ffa75f; /* Variação da cor de destaque no hover do botão principal. */
+    --accent-light: #ffc493; /* Variação da cor de destaque no hover do botão principal. */
     --habilidade-brilho: 255, 163, 84; /* Cor RGB-base usada no brilho dos cartões de Habilidades; mantida por compatibilidade. */
 
 
