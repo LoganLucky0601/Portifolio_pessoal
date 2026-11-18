@@ -343,7 +343,7 @@ h3 {
     border: 1px solid var(--habilidade-borda);
     border-radius: 17px;
     background: var(--habilidade-fundo);
-    box-shadow: 12px 17px 51px var(--habilidade-sombra-base);
+    box-shadow: var(--habilidade-sombra-base);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     cursor: pointer;
@@ -385,8 +385,8 @@ h3 {
 .skill-card:focus-visible,
 .skill-card.is-selected {
     border-color: var(--habilidade-borda-hover);
-    box-shadow: 12px 17px 51px var(--habilidade-sombra-hover),
-                0 0 22px var(--habilidade-brilho-hover);
+    box-shadow: var(--habilidade-sombra-hover),
+                var(--habilidade-brilho-hover);
     transform: translateY(-5px);
 }
 
@@ -431,7 +431,7 @@ h3 {
 .skill-card.is-selected .skill-icon {
     background: var(--habilidade-icone-fundo-hover);
     transform: translateY(-2px);
-    box-shadow: 0 0 0 2px var(--habilidade-icone-anel);
+    box-shadow: 0 0 0 2px var(--habilidade-icone-anel),
                 0 0 20px var(--habilidade-icone-brilho);
 }
 
