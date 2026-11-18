@@ -1,4 +1,4 @@
-#projetos .projects-carousel {
+.projects-section .projects-carousel {
     --card-width: 38%;
     display: flex;
     overflow-x: auto;
@@ -54,9 +54,9 @@
 .projects-position { min-width: 4rem; text-align: center; color: var(--muted); }
 
 @media (max-width: 900px) {
-    #projetos .projects-carousel { --card-width: 55%; }
+    .projects-section .projects-carousel { --card-width: 55%; }
 }
 
 @media (max-width: 600px) {
-    #projetos .projects-carousel { --card-width: 88%; }
+    .projects-section .projects-carousel { --card-width: 88%; }
 }
