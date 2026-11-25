@@ -38,6 +38,7 @@
       modal.querySelector(".journey-modal-summary").textContent =
         card.querySelector(":scope > p")?.textContent || "";
 
+      // Uma única imagem principal por cartão, editada no HTML.
       const sourceImage = details.content.querySelector(".journey-detail-image");
       const src = sourceImage?.getAttribute("src")?.trim();
       showPlaceholder();
