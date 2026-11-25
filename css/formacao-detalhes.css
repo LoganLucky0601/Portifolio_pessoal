@@ -155,3 +155,44 @@
   .journey-modal-image { max-height: calc(46vh - 40px); }
   .journey-modal-text { padding: 25px 20px 30px; }
 }
+
+/* ===== Trajetória: selo opcional no cartão e imagens declaradas no HTML ===== */
+.journey-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  margin-top: auto;
+  min-height: 62px;
+}
+.journey-card .journey-card-footer .journey-note {
+  margin-top: 0;
+  padding-top: 0;
+  align-self: flex-end;
+  min-width: 0;
+}
+.journey-card-badge {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  max-width: 54px;
+  max-height: 58px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.journey-card-badge:not([src]),
+.journey-card-badge[src=""] { display: none; }
+/* A imagem principal só será carregada se receber um src no HTML. */
+.journey-modal .journey-modal-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(68vh, 68dvh);
+  object-fit: contain;
+}
+@media (max-width: 680px) {
+  .journey-card-badge { max-width: 48px; max-height: 52px; }
+  .journey-modal .journey-modal-image { max-height: calc(46vh - 40px); }
+}

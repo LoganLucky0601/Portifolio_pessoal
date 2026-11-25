@@ -1,60 +1,62 @@
-/* Detalhes da trajetória: o conteúdo e os caminhos das imagens são editados
-   diretamente nos <template> de cada cartão no index.html. */
+/* Janelas de formação e experiência.
+   As imagens e informações são editadas diretamente no index.html.
+   O JavaScript só controla a visualização; não define caminhos de arquivos. */
 (() => {
   const modal = document.querySelector("#journey-modal");
   if (!modal) return;
 
   const closeButton = modal.querySelector(".journey-modal-close");
-  const mainImage = modal.querySelector(".journey-modal-image");
+  const media = modal.querySelector(".journey-modal-media");
   const placeholder = modal.querySelector(".journey-modal-placeholder");
-  const badgeWrap = modal.querySelector(".journey-modal-badge-wrap");
-  const badge = modal.querySelector(".journey-modal-badge");
+  const modalImage = modal.querySelector(".journey-modal-image");
+  const extraContainer = modal.querySelector(".journey-modal-extra");
   let lastTrigger = null;
 
-  function updateImage(img, path, alt, onMissing) {
-    img.hidden = !path;
-    img.removeAttribute("src");
-    img.alt = alt || "";
-    if (!path) {
-      onMissing();
-      return;
+  const showPlaceholder = () => {
+    modalImage.hidden = true;
+    modalImage.removeAttribute("src");
+    placeholder.hidden = false;
+  };
+
+  document.querySelectorAll(".journey-card").forEach((card) => {
+    const badge = card.querySelector(".journey-card-badge");
+    if (badge?.hasAttribute("src") && badge.getAttribute("src")?.trim()) {
+      badge.addEventListener("error", () => { badge.hidden = true; });
+      if (badge.complete && !badge.naturalWidth) badge.hidden = true;
     }
-    img.onerror = () => {
-      img.hidden = true;
-      onMissing();
-    };
-    img.src = path;
-  }
 
-  document.querySelectorAll(".journey-card .journey-open").forEach((button) => {
+    const button = card.querySelector(".journey-open");
+    const details = card.querySelector("template.journey-details");
+    if (!button || !details) return;
+
     button.addEventListener("click", () => {
-      const card = button.closest(".journey-card");
-      const details = card?.querySelector("template.journey-details");
-      if (!card || !details) return;
-
       lastTrigger = button;
       modal.querySelector(".journey-modal-category").textContent =
         card.querySelector(".journey-label")?.textContent || "";
       modal.querySelector("#journey-modal-title").textContent =
         card.querySelector("h4")?.textContent || "";
-      modal.querySelector(".journey-modal-period").textContent =
-        button.textContent.replace("↗", "").trim();
       modal.querySelector(".journey-modal-summary").textContent =
-        card.querySelector(":scope > p:not(.journey-note)")?.textContent || "";
+        card.querySelector(":scope > p")?.textContent || "";
 
-      const more = modal.querySelector(".journey-modal-extra");
-      more.replaceChildren(...Array.from(details.content.children).map(node => node.cloneNode(true)));
-      const imagePath = details.dataset.image?.trim() || "";
-      const badgePath = details.dataset.badge?.trim() || "";
-      placeholder.hidden = Boolean(imagePath);
-      updateImage(mainImage, imagePath, details.dataset.imageAlt, () => {
-        placeholder.hidden = false;
-      });
-      badgeWrap.hidden = !badgePath;
-      updateImage(badge, badgePath, details.dataset.badgeAlt, () => {
-        badgeWrap.hidden = true;
-      });
+      const sourceImage = details.content.querySelector(".journey-detail-image");
+      const src = sourceImage?.getAttribute("src")?.trim();
+      showPlaceholder();
+      if (src) {
+        modalImage.alt = sourceImage.getAttribute("alt") || "";
+        modalImage.onerror = showPlaceholder;
+        modalImage.onload = () => {
+          placeholder.hidden = true;
+          modalImage.hidden = false;
+        };
+        modalImage.src = src;
+        if (modalImage.complete && modalImage.naturalWidth) {
+          placeholder.hidden = true;
+          modalImage.hidden = false;
+        }
+      }
 
+      const extra = details.content.querySelector(".journey-detail-extra");
+      extraContainer.replaceChildren(...(extra ? Array.from(extra.childNodes).map(n => n.cloneNode(true)) : []));
       if (typeof modal.showModal === "function") modal.showModal();
     });
   });
@@ -64,8 +66,9 @@
     if (event.target === modal) modal.close();
   });
   modal.addEventListener("close", () => {
-    mainImage.removeAttribute("src");
-    badge.removeAttribute("src");
+    modalImage.onload = null;
+    modalImage.onerror = null;
+    showPlaceholder();
     lastTrigger?.focus();
   });
 })();
