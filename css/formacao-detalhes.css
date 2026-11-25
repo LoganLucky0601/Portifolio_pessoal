@@ -1,0 +1,157 @@
+/* Janela de detalhes das formações e experiências.
+   Cores herdam as paletas claro/escuro já existentes. */
+
+/* O texto de instituição/ano agora é o link de abertura de cada cartão. */
+.journey-open {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  max-width: 100%;
+  width: fit-content;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.6;
+}
+.journey-open:hover { text-decoration: underline; text-underline-offset: 4px; }
+.journey-open:focus-visible, .journey-modal-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.journey-open span { flex-shrink: 0; }
+
+.journey-modal {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  width: min(880px, calc(100vw - 28px));
+  max-width: calc(100vw - 28px);
+  max-height: min(90vh, 90dvh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 25px 90px rgba(0, 0, 0, .46);
+}
+.journey-modal::backdrop {
+  background: rgba(4, 5, 9, .82);
+  backdrop-filter: blur(6px);
+}
+.journey-modal-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-width: 0;
+}
+.journey-modal-media {
+  box-sizing: border-box;
+  min-height: 350px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+}
+.journey-modal-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(68vh, 68dvh);
+  object-fit: contain;
+}
+.journey-modal-image[hidden] { display: none; }
+.journey-modal-placeholder {
+  text-align: center;
+  max-width: 260px;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.7;
+}
+.journey-modal-placeholder span {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+.journey-modal-placeholder[hidden] { display: none; }
+.journey-modal-text {
+  align-self: center;
+  min-width: 0;
+  padding: 48px 30px 34px;
+  overflow-wrap: anywhere;
+}
+.journey-modal-text h3 {
+  font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+  margin: 10px 0 12px;
+  line-height: 1.35;
+}
+.journey-modal-period { color: var(--accent); font-weight: 600; font-size: .86rem; }
+.journey-modal-summary, .journey-modal-extra {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: .9rem;
+}
+.journey-modal-summary { margin-top: 16px; }
+.journey-modal-extra { margin-top: 12px; }
+.journey-modal-extra p + p { margin-top: 10px; }
+.journey-modal-extra ul { padding-left: 20px; }
+.journey-modal-badge-wrap { margin: 18px 0 4px; }
+.journey-modal-badge-wrap[hidden] { display: none; }
+.journey-modal-badge {
+  display: block;
+  max-width: 140px;
+  max-height: 125px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.journey-modal-close {
+  position: sticky;
+  top: 12px;
+  float: right;
+  margin: 12px 12px -52px 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  background: var(--surface-2);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.6rem;
+}
+.journey-modal-close:hover { border-color: var(--accent); }
+
+@media (max-width: 680px) {
+  .journey-modal {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: min(96vh, 96dvh);
+  }
+  .journey-modal-inner { grid-template-columns: 1fr; }
+  .journey-modal-media {
+    min-height: 200px;
+    max-height: 46vh;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .journey-modal-image { max-height: calc(46vh - 40px); }
+  .journey-modal-text { padding: 25px 20px 30px; }
+}
